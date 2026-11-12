@@ -1,0 +1,62 @@
+@import "@fontsource-variable/instrument-sans";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --color-base: #14171a;
+  --color-surface: #1a1e22;
+  --color-raised: #21262b;
+  --color-line: #2a3036;
+  --color-line-strong: #3a424a;
+  --color-fg: #e6eaed;
+  --color-muted: #8a939b;
+  --color-faint: #5e666e;
+
+  --color-emerald: #2e9e76;
+  --color-emerald-soft: #173a2e;
+  --color-cyan: #5ba4b4;
+  --color-cyan-soft: #18323a;
+  --color-amber: #d4a04a;
+  --color-amber-soft: #3a2f1a;
+  --color-rose: #c46a62;
+  --color-rose-soft: #3a1f1d;
+
+  --radius-control: 6px;
+  --radius-panel: 10px;
+
+  --text-2xs: 0.6875rem;
+}
+
+@layer base {
+  html {
+    background: var(--color-base);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-feature-settings: "tnum" 1, "cv11" 1;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { min-height: 100vh; font-size: 0.875rem; line-height: 1.45; }
+  ::selection { background: var(--color-emerald-soft); }
+  :focus-visible { outline: 2px solid var(--color-cyan); outline-offset: 2px; border-radius: 4px; }
+  * { scrollbar-color: var(--color-line-strong) transparent; scrollbar-width: thin; }
+  h1, h2, h3 { letter-spacing: -0.01em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-panel);
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--color-raised) 0%, #282e34 50%, var(--color-raised) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: 4px;
+}
+@keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }

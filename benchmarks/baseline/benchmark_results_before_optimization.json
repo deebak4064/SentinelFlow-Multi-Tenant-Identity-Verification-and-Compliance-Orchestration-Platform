@@ -1,0 +1,439 @@
+{
+  "generated_at": "2026-11-12T14:01:37+00:00",
+  "disclaimer": "Local single-host measurements (API, DB, Redis and load generator co-located). Not production capacity claims.",
+  "environment": {
+    "cpu_count": 2,
+    "memory_gb": 7.8,
+    "platform": "Linux-6.18.44-fc-v378-x86_64-with-glibc2.39",
+    "python": "3.13.18",
+    "postgres": "PostgreSQL 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)",
+    "redis": "7.0.15"
+  },
+  "config": {
+    "api_workers": 4,
+    "duration_s": 60,
+    "levels": [
+      10,
+      50,
+      100,
+      200
+    ],
+    "name_pool": 400,
+    "provider_simulation": "40 ms \u00b150% latency, 5% outage rate, 1% timeout rate, 300 ms timeout, 2 retries"
+  },
+  "load_levels": [
+    {
+      "aggregate": {
+        "requests": 2682,
+        "failures": 0,
+        "error_rate": 0.0,
+        "rps": 44.64,
+        "avg_ms": 72.52,
+        "p50_ms": 81.0,
+        "p95_ms": 140.0,
+        "p99_ms": 430.0,
+        "max_ms": 598.5
+      },
+      "endpoints": {
+        "GET /dashboard/overview": {
+          "requests": 126,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 2.1,
+          "avg_ms": 11.73,
+          "p50_ms": 9.0,
+          "p95_ms": 27.0,
+          "p99_ms": 68.0,
+          "max_ms": 76.5
+        },
+        "GET /verifications": {
+          "requests": 515,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 8.57,
+          "avg_ms": 21.18,
+          "p50_ms": 18.0,
+          "p95_ms": 36.0,
+          "p99_ms": 69.0,
+          "max_ms": 118.3
+        },
+        "GET /verifications/{id}": {
+          "requests": 399,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 6.64,
+          "avg_ms": 16.37,
+          "p50_ms": 15.0,
+          "p95_ms": 28.0,
+          "p99_ms": 40.0,
+          "max_ms": 60.5
+        },
+        "POST /verifications": {
+          "requests": 1642,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 27.33,
+          "avg_ms": 106.93,
+          "p50_ms": 96.0,
+          "p95_ms": 160.0,
+          "p99_ms": 450.0,
+          "max_ms": 598.5
+        }
+      },
+      "resources": {
+        "api": {
+          "cpu_percent_avg": 0.0,
+          "cpu_percent_max": 0.0,
+          "rss_mb_avg": 475.4,
+          "rss_mb_max": 476.5
+        },
+        "postgres": {
+          "cpu_percent_avg": 22.5,
+          "cpu_percent_max": 28.0,
+          "rss_mb_avg": 621.8,
+          "rss_mb_max": 744.7
+        },
+        "redis": {
+          "cpu_percent_avg": 0.6,
+          "cpu_percent_max": 2.0,
+          "rss_mb_avg": 8.1,
+          "rss_mb_max": 8.2
+        }
+      },
+      "users": 10
+    },
+    {
+      "aggregate": {
+        "requests": 5010,
+        "failures": 0,
+        "error_rate": 0.0,
+        "rps": 83.26,
+        "avg_ms": 446.12,
+        "p50_ms": 390.0,
+        "p95_ms": 970.0,
+        "p99_ms": 1100.0,
+        "max_ms": 1467.9
+      },
+      "endpoints": {
+        "GET /dashboard/overview": {
+          "requests": 233,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 3.87,
+          "avg_ms": 113.77,
+          "p50_ms": 100.0,
+          "p95_ms": 220.0,
+          "p99_ms": 350.0,
+          "max_ms": 499.0
+        },
+        "GET /verifications": {
+          "requests": 1011,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 16.8,
+          "avg_ms": 252.93,
+          "p50_ms": 230.0,
+          "p95_ms": 480.0,
+          "p99_ms": 590.0,
+          "max_ms": 640.1
+        },
+        "GET /verifications/{id}": {
+          "requests": 754,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 12.53,
+          "avg_ms": 166.1,
+          "p50_ms": 160.0,
+          "p95_ms": 300.0,
+          "p99_ms": 370.0,
+          "max_ms": 433.2
+        },
+        "POST /verifications": {
+          "requests": 3012,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 50.06,
+          "avg_ms": 606.78,
+          "p50_ms": 570.0,
+          "p95_ms": 1000.0,
+          "p99_ms": 1200.0,
+          "max_ms": 1467.9
+        }
+      },
+      "resources": {
+        "api": {
+          "cpu_percent_avg": 0.0,
+          "cpu_percent_max": 0.0,
+          "rss_mb_avg": 492.1,
+          "rss_mb_max": 493.2
+        },
+        "postgres": {
+          "cpu_percent_avg": 46.8,
+          "cpu_percent_max": 55.2,
+          "rss_mb_avg": 3432.3,
+          "rss_mb_max": 4276.3
+        },
+        "redis": {
+          "cpu_percent_avg": 1.0,
+          "cpu_percent_max": 2.0,
+          "rss_mb_avg": 8.5,
+          "rss_mb_max": 8.5
+        }
+      },
+      "users": 50
+    },
+    {
+      "aggregate": {
+        "requests": 4587,
+        "failures": 0,
+        "error_rate": 0.0,
+        "rps": 75.45,
+        "avg_ms": 1167.86,
+        "p50_ms": 1000.0,
+        "p95_ms": 2400.0,
+        "p99_ms": 2900.0,
+        "max_ms": 3240.3
+      },
+      "endpoints": {
+        "GET /dashboard/overview": {
+          "requests": 234,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 3.85,
+          "avg_ms": 311.13,
+          "p50_ms": 310.0,
+          "p95_ms": 560.0,
+          "p99_ms": 730.0,
+          "max_ms": 890.8
+        },
+        "GET /verifications": {
+          "requests": 911,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 14.98,
+          "avg_ms": 660.45,
+          "p50_ms": 650.0,
+          "p95_ms": 1200.0,
+          "p99_ms": 1400.0,
+          "max_ms": 1670.0
+        },
+        "GET /verifications/{id}": {
+          "requests": 700,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 11.51,
+          "avg_ms": 439.41,
+          "p50_ms": 450.0,
+          "p95_ms": 770.0,
+          "p99_ms": 900.0,
+          "max_ms": 1041.8
+        },
+        "POST /verifications": {
+          "requests": 2742,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 45.1,
+          "avg_ms": 1595.52,
+          "p50_ms": 1700.0,
+          "p95_ms": 2600.0,
+          "p99_ms": 2900.0,
+          "max_ms": 3240.3
+        }
+      },
+      "resources": {
+        "api": {
+          "cpu_percent_avg": 0.0,
+          "cpu_percent_max": 0.0,
+          "rss_mb_avg": 503.1,
+          "rss_mb_max": 504.8
+        },
+        "postgres": {
+          "cpu_percent_avg": 48.4,
+          "cpu_percent_max": 63.2,
+          "rss_mb_avg": 8613.9,
+          "rss_mb_max": 10307.4
+        },
+        "redis": {
+          "cpu_percent_avg": 1.0,
+          "cpu_percent_max": 1.9,
+          "rss_mb_avg": 8.6,
+          "rss_mb_max": 8.6
+        }
+      },
+      "users": 100
+    },
+    {
+      "aggregate": {
+        "requests": 4318,
+        "failures": 0,
+        "error_rate": 0.0,
+        "rps": 71.17,
+        "avg_ms": 2630.91,
+        "p50_ms": 2700.0,
+        "p95_ms": 4700.0,
+        "p99_ms": 5300.0,
+        "max_ms": 7067.9
+      },
+      "endpoints": {
+        "GET /dashboard/overview": {
+          "requests": 203,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 3.35,
+          "avg_ms": 819.13,
+          "p50_ms": 770.0,
+          "p95_ms": 1500.0,
+          "p99_ms": 1900.0,
+          "max_ms": 2450.2
+        },
+        "GET /verifications": {
+          "requests": 826,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 13.61,
+          "avg_ms": 1255.8,
+          "p50_ms": 1200.0,
+          "p95_ms": 2000.0,
+          "p99_ms": 2400.0,
+          "max_ms": 2794.0
+        },
+        "GET /verifications/{id}": {
+          "requests": 659,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 10.86,
+          "avg_ms": 1049.11,
+          "p50_ms": 1100.0,
+          "p95_ms": 1700.0,
+          "p99_ms": 2100.0,
+          "max_ms": 2486.8
+        },
+        "POST /verifications": {
+          "requests": 2630,
+          "failures": 0,
+          "error_rate": 0.0,
+          "rps": 43.35,
+          "avg_ms": 3598.98,
+          "p50_ms": 3700.0,
+          "p95_ms": 4900.0,
+          "p99_ms": 5600.0,
+          "max_ms": 7067.9
+        }
+      },
+      "resources": {
+        "api": {
+          "cpu_percent_avg": 0.0,
+          "cpu_percent_max": 0.0,
+          "rss_mb_avg": 519.1,
+          "rss_mb_max": 522.1
+        },
+        "postgres": {
+          "cpu_percent_avg": 48.3,
+          "cpu_percent_max": 62.3,
+          "rss_mb_avg": 16000.9,
+          "rss_mb_max": 19136.2
+        },
+        "redis": {
+          "cpu_percent_avg": 0.9,
+          "cpu_percent_max": 1.9,
+          "rss_mb_avg": 8.8,
+          "rss_mb_max": 8.8
+        }
+      },
+      "users": 200
+    }
+  ],
+  "derived": {
+    "provider_calls": 21544,
+    "provider_calls_with_transient_failure": 795,
+    "provider_calls_recovered_by_retry": 793,
+    "provider_failure_recovery_rate": 0.9975,
+    "provider_final_error_rate": 9e-05,
+    "in_workflow_step_latency_ms": {
+      "load_context": {
+        "p50": 200.325,
+        "p95": 1032.268,
+        "p99": 1401.339,
+        "n": 10772
+      },
+      "provider:sim_idv": {
+        "p50": 66.65,
+        "p95": 189.284,
+        "p99": 465.316,
+        "n": 10772
+      },
+      "provider:sim_watchlist": {
+        "p50": 0.0,
+        "p95": 57.844,
+        "p99": 110.6,
+        "n": 10772
+      },
+      "risk_scoring": {
+        "p50": 0.03,
+        "p95": 0.05,
+        "p99": 0.26,
+        "n": 10772
+      },
+      "policy_evaluation": {
+        "p50": 0.08,
+        "p95": 0.17,
+        "p99": 3.022,
+        "n": 10772
+      }
+    },
+    "workflow_end_to_end_ms": {
+      "p50": 317.88,
+      "p95": 1408.391,
+      "p99": 1803.785,
+      "n": 10772
+    },
+    "verifications_stored": 10772,
+    "total_verification_rows_in_db": 11506,
+    "db_query_latency_ms": {
+      "tenant_scoped_lookup_by_id": {
+        "p50": 0.676,
+        "p95": 1.019,
+        "p99": 1.332,
+        "n": 200
+      },
+      "verification_list_page_join": {
+        "p50": 5.242,
+        "p95": 6.205,
+        "p99": 8.1,
+        "n": 200
+      },
+      "verification_detail_children": {
+        "p50": 1.116,
+        "p95": 1.669,
+        "p99": 3.674,
+        "n": 200
+      },
+      "dashboard_aggregates": {
+        "p50": 9.414,
+        "p95": 13.77,
+        "p99": 18.743,
+        "n": 50
+      }
+    }
+  },
+  "policy_microbenchmark": {
+    "policies_evaluated_per_call": 8,
+    "iterations": 100000,
+    "us_per_evaluation_best": 13.45,
+    "us_per_evaluation_median": 13.52
+  },
+  "cache": {
+    "provider:sim_watchlist": {
+      "hit": 8778,
+      "miss": 1994,
+      "hit_rate": 0.8149
+    },
+    "dashboard": {
+      "hit": 834,
+      "miss": 32,
+      "hit_rate": 0.963
+    }
+  },
+  "test_coverage_percent": 94.7,
+  "test_counts": "145 backend tests, 12 frontend component tests, 8 Playwright end-to-end tests"
+}
